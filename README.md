@@ -24,6 +24,8 @@ _To view the full Terminal interaction, please click [here](http://p.ip.fi/142e)
 ![ss1](images/ss1.png)
 ![ss2](images/ss2.png)
 
+## Project Structure
+
 ## Steps Followed to do this Project
 
 -   Started with the Display class to get the inputs from user.
@@ -32,5 +34,50 @@ _To view the full Terminal interaction, please click [here](http://p.ip.fi/142e)
 -   Then wrote the unit tests in JUnit to test the various class methods and the logic of the game using various test cases.
 
 ## Scope for Improvement
+
+-   **Using Hash Maps to store the previous states and stop the game when a previous state repeats** - In the game now if 2 patters alternate each other we end up in a an infinite loop. However we can fix this using a Hash Map and encode out Live cells coordinates like "1,2,3,2,3,4," where the points of live cells are (1,2),(3,2),(3,4). So when we encounter this same pattern we can check it in the hash maps if its present. And if it's present we can end the game cause it will anyway repeat the same pattern which already occurred. If it's not present we can just mark this pattern as encountered and continue the game.
+
+## Dependencies
+
+-   JAVA (OpenJDK 11.0 +)
+-   JUnit (V4.0 +)
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://link-to-project
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Compile the code
+
+```bash
+  javac Game.java
+```
+
+Run the code
+
+```bash
+  java Game
+```
+
+## Running Tests
+
+To run tests, run the following commands
+
+```bash
+  javac TestGame.java
+```
+
+```bash
+  java TestGame
+```
 
 ## Resources Used
