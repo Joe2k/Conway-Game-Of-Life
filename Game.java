@@ -19,7 +19,7 @@ public class Game {
     private int run() {
         int i = 0;
         while (!board.isEmpty()) {
-            System.out.println("At Generation : " + Integer.toString(i));
+            System.out.println("***** At Generation : " + Integer.toString(i)+" ***** \n");
             board.displayBoard();
             boolean isSame = board.nextGeneration();
             if (isSame) {
@@ -35,7 +35,11 @@ public class Game {
 
     private void changeDimension() {
         int dimensions[] = Display.getDimensions();
-        board.setDimensions(dimensions[0], dimensions[1]);
+        if(dimensions[0]>0 && dimensions[1]>0)
+            board.setDimensions(dimensions[0], dimensions[1]);
+        else {
+            System.out.println("Invalid Dimentions! \n");
+        }
     }
 
     public static void main(String args[]) {

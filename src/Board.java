@@ -155,7 +155,7 @@ public class Board {
 
     public void displayBoardWithLabels() {
 
-        System.out.println("Your Current Board \nO - Live Cell     X - Dead Cell \n");
+        System.out.println("***** Current Board ***** \nO - Live Cell     X - Dead Cell \n");
 
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[0].length; j++) {
@@ -172,7 +172,7 @@ public class Board {
     }
 
     public int displayFinalState() {
-        System.out.println("***** FINAL STATE *****");
+        System.out.println("***** FINAL STATE ***** \n");
         displayBoard();
         System.out.println("Do you want to continue? \nPress 1 to continue \nAny other number to exit");
 
