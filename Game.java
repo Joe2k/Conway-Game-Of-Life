@@ -46,7 +46,7 @@ public class Game {
         boolean flag = true;
 
         while (flag) {
-            board.displayBoard();
+            board.displayBoardWithLabels();
             int choice = Display.displayCommands();
             
             switch (choice) {
