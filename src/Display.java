@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Display {
 
-    public void displayBoard(boolean[][] board) {
+    public static void displayBoard(boolean[][] board) {
 
         System.out.println("Your Current Board \nO - Live Cell     X - Dead Cell \n");
 
@@ -19,21 +19,22 @@ public class Display {
             }
             System.out.println("");
         }
+        System.out.println("");
     }
     
-    public int displayCommands() {
+    public static int displayCommands() {
         System.out.println("Press 1 to select a cell and negate it's current state");
         System.out.println("Press 2 to run the Conway's Game of Life");
-        System.out.println("Press any other character to exit the game");
+        System.out.println("Press any other character to exit the game\n");
 
         Scanner myInput = new Scanner(System.in);
         int choice = myInput.nextInt();
-        myInput.close();
+        System.out.println("");
 
         return choice;
     }
 
-    public int[] getCoordinates() {
+    public static int[] getCoordinates() {
         int coordinates[] = new int[2];
         Scanner myInput = new Scanner(System.in);
 
@@ -43,8 +44,8 @@ public class Display {
         System.out.print("Enter the 2nd co-ordinate of the cell : ");
         coordinates[1] = myInput.nextInt();
 
-        myInput.close();
-        
+        System.out.println("");
+
         return coordinates;
     }
     
