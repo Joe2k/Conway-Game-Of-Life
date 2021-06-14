@@ -2,7 +2,7 @@ import src.*;
 
 public class Game {
 
-    private boolean[][] board = new boolean[10][10];
+    private static Board board = new Board(10, 10);
     
 
     private void handleSelection() {
@@ -11,7 +11,7 @@ public class Game {
         if (coordinates[0] < 0 || coordinates[0] > 9 || coordinates[1] < 0 || coordinates[1] > 9) {
             System.out.println("Invalid Choice!\n");
         } else {
-            this.board[coordinates[0]][coordinates[1]] = !this.board[coordinates[0]][coordinates[1]];
+            board.changeBoard(coordinates[0], coordinates[1]);
             System.out.println("Selection Successful!\n");
         }
     }
@@ -21,7 +21,7 @@ public class Game {
         boolean flag = true;
 
         while (flag) {
-            Display.displayBoard(game.board);
+            board.displayBoard();
             int choice = Display.displayCommands();
             
             switch (choice) {

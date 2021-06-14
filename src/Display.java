@@ -3,24 +3,6 @@ package src;
 import java.util.*;
 
 public class Display {
-
-    public static void displayBoard(boolean[][] board) {
-
-        System.out.println("Your Current Board \nO - Live Cell     X - Dead Cell \n");
-
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
-                if (board[i][j]) {
-                    System.out.print("O (" + Integer.toString(i) + ", " + Integer.toString(j) + ")  ");
-                } else {
-                    System.out.print("X (" + Integer.toString(i) + ", " + Integer.toString(j) + ")  ");
-                }
-
-            }
-            System.out.println("");
-        }
-        System.out.println("");
-    }
     
     public static int displayCommands() {
         System.out.println("Press 1 to select a cell and negate it's current state");
