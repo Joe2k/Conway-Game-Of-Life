@@ -18,6 +18,10 @@ public class Board {
         board = new boolean[i][j];
     }
 
+    public void setDimensions(int i, int j){
+        board = new boolean[i][j];
+    }
+
     public boolean[][] getBoard() {
         return board;
     }
@@ -25,10 +29,19 @@ public class Board {
     public void changeBoard(int i, int j) {
         board[i][j] = !board[i][j];
     }
+
+    public int[] getSize() {
+        int[] size = new int[2];
+
+        size[0] = board.length;
+        size[1] = board[0].length;
+
+        return size;
+    }
     
     public boolean isEmpty() {
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[0].length; j++) {
                 if (board[i][j] == true) {
                     return false;
                 }
@@ -39,8 +52,8 @@ public class Board {
     }
 
     public static boolean isEqual(boolean[][] board1, boolean[][] board2) {
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
+        for (int i = 0; i < board1.length; i++) {
+            for (int j = 0; j < board1[0].length; j++) {
                 if (board1[i][j] != board2[i][j]) {
                     return false;
                 }
@@ -51,11 +64,11 @@ public class Board {
     }
 
     public boolean nextStep() {
-        boolean[][] newBoard = new boolean[10][10];
+        boolean[][] newBoard = new boolean[board.length][board[0].length];
 
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
-                
+
                 int neighborLiveCells = 0;
                 for (int k = 0; k < 8; k++) {
                     if (i + neighbors[k][0] >= 0 && i + neighbors[k][0] <= 9 && j + neighbors[k][1] >= 0
@@ -82,7 +95,7 @@ public class Board {
             }
         }
         boolean isSame = isEqual(board, newBoard);
-        // System.out.println(isSame);
+
         board = newBoard;
 
         return isSame;
@@ -92,8 +105,8 @@ public class Board {
 
         System.out.println("Your Current Board \nO - Live Cell     X - Dead Cell \n");
 
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[0].length; j++) {
                 if (board[i][j]) {
                     System.out.print("O (" + Integer.toString(i) + ", " + Integer.toString(j) + ")  ");
                 } else {
