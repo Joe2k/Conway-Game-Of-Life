@@ -24,7 +24,13 @@ _To view the full Terminal interaction, please click [here](http://p.ip.fi/142e)
 ![ss1](images/ss1.png)
 ![ss2](images/ss2.png)
 
-## Steps to follow
+## Steps Followed to do this Project
 
--   Create a basic command line logic to recreate this game
--   Try to use Swing to create the GUI
+-   Started with the Display class to get the inputs from user.
+-   Then worked on the Board class to initialize the board and created various needed methods.
+-   Then created the main Game class to overlook the working of the game and to call the necessary methods from Board and Display class when needed.
+-   Then wrote the unit tests in JUnit to test the various class methods and the logic of the game using various test cases.
+
+## Scope for Improvement
+
+## Resources Used
