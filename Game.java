@@ -16,6 +16,19 @@ public class Game {
         }
     }
 
+    private void run() {
+        int i = 0;
+        while (!board.isEmpty()) {
+            System.out.println("At Iteration : " + Integer.toString(i));
+            board.displayBoard();
+            boolean isSame = board.nextStep();
+            if (isSame) {
+                break;
+            }
+            i++;
+        }
+    }
+
     public static void main(String args[]) {
         Game game = new Game();
         boolean flag = true;
@@ -27,6 +40,9 @@ public class Game {
             switch (choice) {
                 case 1:
                     game.handleSelection();
+                    break;
+                case 2:
+                    game.run();
                     break;
                 default:
                     flag=false;
