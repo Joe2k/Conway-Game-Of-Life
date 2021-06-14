@@ -16,7 +16,7 @@ public class Game {
         }
     }
 
-    private void run() {
+    private int run() {
         int i = 0;
         while (!board.isEmpty()) {
             System.out.println("At Generation : " + Integer.toString(i));
@@ -27,6 +27,10 @@ public class Game {
             }
             i++;
         }
+
+        int choice = board.displayFinalState();
+
+        return choice;
     }
 
     private void changeDimension() {
@@ -47,7 +51,8 @@ public class Game {
                     game.handleSelection();
                     break;
                 case 2:
-                    game.run();
+                    int toContinue = game.run();
+                    if (toContinue != 1) flag=false;
                     break;
                 case 3:
                     game.changeDimension();

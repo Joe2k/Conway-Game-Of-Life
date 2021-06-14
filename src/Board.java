@@ -1,5 +1,7 @@
 package src;
 
+import java.util.*;
+
 public class Board {
     private boolean[][] board;
 
@@ -66,13 +68,13 @@ public class Board {
     public boolean nextStep() {
         boolean[][] newBoard = new boolean[board.length][board[0].length];
 
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[0].length; j++) {
 
                 int neighborLiveCells = 0;
                 for (int k = 0; k < 8; k++) {
-                    if (i + neighbors[k][0] >= 0 && i + neighbors[k][0] <= 9 && j + neighbors[k][1] >= 0
-                            && j + neighbors[k][1] <= 9) {
+                    if (i + neighbors[k][0] >= 0 && i + neighbors[k][0] < board.length && j + neighbors[k][1] >= 0
+                            && j + neighbors[k][1] < board[0].length) {
                         if (board[i + neighbors[k][0]][j + neighbors[k][1]]) {
                             neighborLiveCells++;
                         }
@@ -117,5 +119,16 @@ public class Board {
             System.out.println("");
         }
         System.out.println("");
+    }
+
+    public int displayFinalState() {
+        System.out.println("***** FINAL STATE *****");
+        displayBoard();
+        System.out.println("Do you want to continue? \nPress 1 to continue \nAny other number to exit");
+
+        Scanner myInput = new Scanner(System.in);
+        int choice = myInput.nextInt();
+
+        return choice;
     }
 }
