@@ -74,13 +74,25 @@ public class Board {
         }
 
         for (int i = 1; i < board[0].length - 1; i++) {
-            if ((board[0][i] && board[0][i-1] && board[0][i+1]) || (board[board.length-1][i]
-                    && board[board.length-1][i - 1] && board[board.length-1][i+1])) {
+            if ((board[0][i] && board[0][i - 1] && board[0][i + 1]) || (board[board.length - 1][i]
+                    && board[board.length - 1][i - 1] && board[board.length - 1][i + 1])) {
                 return true;
             }
         }
 
         return false;
+    }
+    
+    public void addPadding() {
+        boolean[][] newBoard = new boolean[board.length + 2][board[0].length + 2];
+
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[0].length; j++) {
+                newBoard[i + 1][j + 1] = board[i][j];
+            }
+        }
+
+        board = newBoard;
     }
 
     public boolean nextStep() {
