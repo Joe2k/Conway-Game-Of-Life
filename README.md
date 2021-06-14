@@ -26,6 +26,28 @@ _To view the full Terminal interaction, please click [here](http://p.ip.fi/142e)
 
 ## Project Structure
 
+```bash
+├── Game.java
+├── src
+│   ├── Board.java
+│   └── Display.java
+├── TestGame.java
+└── tests
+    ├── TestBoard.java
+    ├── TestLogic.java
+    └── TestSuite.java
+```
+
+-   **Game.java** - This is the main Game class which is instantiated when the game starts. The Board and Display classes are instantiated here.
+-   **src**
+    -   **Board.java** - This is the Board class which controls the board's values and has various methods to make use of the board from the Game class.
+    -   **Display.java** - This is the Display class which has various methods to coordinate the output and input of the user.
+-   **TestGame.java** - This is the main Test class which is instantiated when we start the tests. This inturn imports JUnit and runs the TestSuite class.
+-   **tests**
+    -   **TestBoard.java** - This class has various tests to test all the methods of the Board Class.
+    -   **TestLogic.java** - This class has multiple tests to test the logic of our game and keeps a check on the input and output.
+    -   **TestSuite.java** - This class encapsulates the TestBoard and TestLogic classes and runs alls the tests once this class in instantiated in the TestGame class.
+
 ## Steps Followed to do this Project
 
 -   Started with the Display class to get the inputs from user.
