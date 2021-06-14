@@ -65,6 +65,24 @@ public class Board {
         return true;
     }
 
+    public boolean isOutOfBounds() {
+        for (int i = 1; i < board.length - 1; i++) {
+            if ((board[i][0] && board[i - 1][0] && board[i + 1][0]) || (board[i][board[0].length - 1]
+                    && board[i - 1][board[0].length - 1] && board[i + 1][board[0].length - 1])) {
+                return true;
+            }
+        }
+
+        for (int i = 1; i < board[0].length - 1; i++) {
+            if ((board[0][i] && board[0][i-1] && board[0][i+1]) || (board[board.length-1][i]
+                    && board[board.length-1][i - 1] && board[board.length-1][i+1])) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public boolean nextStep() {
         boolean[][] newBoard = new boolean[board.length][board[0].length];
 
