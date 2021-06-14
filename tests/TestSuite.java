@@ -6,7 +6,8 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 
 @Suite.SuiteClasses({
-   TestBoard.class
+        TestBoard.class,
+   TestLogic.class
 })
 
 public class TestSuite {

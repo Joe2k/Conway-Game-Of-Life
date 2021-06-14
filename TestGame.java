@@ -13,6 +13,6 @@ public class TestGame {
       }
 		
       if(result.wasSuccessful())
-         System.out.println("Tests Passed!");
+         System.out.println("All Tests Passed!");
    }
 } 

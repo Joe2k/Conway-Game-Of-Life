@@ -21,10 +21,7 @@ public class Game {
         while (!board.isEmpty()) {
             System.out.println("At Generation : " + Integer.toString(i));
             board.displayBoard();
-            if (board.isOutOfBounds()) {
-                board.addPadding();
-            }
-            boolean isSame = board.nextStep();
+            boolean isSame = board.nextGeneration();
             if (isSame) {
                 break;
             }

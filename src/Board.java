@@ -95,7 +95,11 @@ public class Board {
         board = newBoard;
     }
 
-    public boolean nextStep() {
+    public boolean nextGeneration() {
+        if (isOutOfBounds()) {
+            addPadding();
+        }
+        
         boolean[][] newBoard = new boolean[board.length][board[0].length];
 
         for (int i = 0; i < board.length; i++) {

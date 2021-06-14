@@ -79,6 +79,6 @@ public class TestBoard {
 
       assertTrue("Board must be equal", Board.isEqual(board1, board2));
       assertFalse("Boards must not be equal", Board.isEqual(board1, board3));
-      
+
    }
 }
