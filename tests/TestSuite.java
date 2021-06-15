@@ -10,6 +10,9 @@ import org.junit.runners.Suite;
    TestLogic.class
 })
 
+/**
+ * The TestSuite class which encapsulates both TestBoard and TestLogic classes.
+ */
 public class TestSuite {
     
 }

@@ -6,6 +6,9 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 import src.*;
 
+/**
+ * The TestLogic class which has all the tests related to the logic and working of the game.
+ */
 public class TestLogic {
    
    @Test

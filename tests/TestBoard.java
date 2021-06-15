@@ -6,6 +6,9 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 import src.*;
 
+/**
+ * The TestBoard class which has all the tests related to the Board class and its methods.
+ */
 public class TestBoard {
 
    @Test
