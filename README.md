@@ -1,6 +1,6 @@
 # Conway's Game of Life
 
-A Graphical Interface Application which accepts the starting conditions and helps the user to observe the Game of Life through many generations.
+A Graphical Interface Application which accepts the starting conditions and helps the user to observe the Conway's Game of Life through many generations.
 
 ## Rules of the game
 
@@ -15,6 +15,7 @@ A Graphical Interface Application which accepts the starting conditions and help
 -   Each generation will be printed.
 -   The board will automatically expand as and when it's needed to accommodate the live cells out of bounds.
 -   The game will stop when the board has all dead cells or if it's encountering the same pattern.
+-   Has Unit tests written with JUnit.
 
 ## Screenshots
 
@@ -69,13 +70,13 @@ _To view the full Terminal interaction, please click [here](http://p.ip.fi/142e)
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/Joe2k/Conway-Game-Of-Life
 ```
 
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd Conway-Game-Of-Life
 ```
 
 Compile the code
