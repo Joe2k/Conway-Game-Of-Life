@@ -2,6 +2,9 @@ package src;
 
 import java.util.*;
 
+/**
+ * The Board class which has full control over the board and maintains it's state.
+ */
 public class Board {
     private boolean[][] board; /*!< The main 2D boolean board where all our methods will work with. */
 

@@ -2,9 +2,16 @@ package src;
 
 import java.util.*;
 
+/**
+ * The Display class which has many methods to help in the i/o from the user.
+ */
 public class Display {
     static Scanner myInput = new Scanner(System.in);
     
+    /**
+    * Function to display the user commands and get their choice
+    * @return choice from user.
+    */
     public static int displayCommands() {
         System.out.println("Press 1 to select a cell and negate it's current state");
         System.out.println("Press 2 to run the Conway's Game of Life");
@@ -18,6 +25,10 @@ public class Display {
         return choice;
     }
 
+    /**
+    * Function to get the coordinates from the user.
+    * @return coordinates which will be of type array with 2 elements
+    */
     public static int[] getCoordinates() {
         int coordinates[] = new int[2];
 
@@ -32,6 +43,10 @@ public class Display {
         return coordinates;
     }
 
+    /**
+    * Function to get the dimensions from the user.
+    * @return dimensions which will be of type array with 2 elements
+    */
     public static int[] getDimensions() {
         int dimensions[] = new int[2];
 
