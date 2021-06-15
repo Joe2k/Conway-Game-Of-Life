@@ -49,6 +49,10 @@ _To view the full Terminal interaction, please click [here](http://p.ip.fi/142e)
     -   **TestLogic.java** - This class has multiple tests to test the logic of our game and keeps a check on the input and output.
     -   **TestSuite.java** - This class encapsulates the TestBoard and TestLogic classes and runs alls the tests once this class in instantiated in the TestGame class.
 
+## Documentation
+
+You can checkout the documentation created with Doxygen [here](https://joe2k.github.io/Conway-Game-Of-Life/).
+
 ## Steps Followed to do this Project
 
 -   Started with the Display class to get the inputs from user.
@@ -104,3 +108,6 @@ To run tests, run the following commands
 ```
 
 ## Resources Used
+
+-   [playgameoflife](https://playgameoflife.com/) to visualize the game.
+-   Doxygen to generate the documentation.
